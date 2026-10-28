@@ -1,0 +1,73 @@
+{
+  "operations_only_context_seen": {
+    "positions": 26,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "false",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      0
+    ]
+  },
+  "operations_only_development": {
+    "positions": 59,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "false",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      0
+    ]
+  },
+  "operations_only_validation_seen": {
+    "positions": 20,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "false",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      0
+    ]
+  },
+  "regime_retest_context_seen": {
+    "positions": 11,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "true",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      1,
+      2,
+      3
+    ]
+  },
+  "regime_retest_development": {
+    "positions": 26,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "true",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      1,
+      2,
+      3
+    ]
+  },
+  "regime_retest_validation_seen": {
+    "positions": 7,
+    "complete_volume_balanced_journal": true,
+    "input_switch_verified": "true",
+    "overnight_positions": 0,
+    "native_swap_usd": 0.0,
+    "exits_after_deadline_minute": 0,
+    "confirmation_bar_ages": [
+      1,
+      3
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "created_date": "2026-10-28",
+  "scope": "Public original gold research and aggregate historical context",
+  "native_platform": {
+    "mt5_build": 6231,
+    "wine_version": "11.1",
+    "os": "macOS",
+    "native_model": "Every tick based on real ticks",
+    "time_basis": "broker server",
+    "virtual_initial_usd": 100000,
+    "leverage": "1:100"
+  },
+  "revision_source_sha256": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+  "revision_binary_sha256": "06db7ad45cae5b431dc408cd28136cd5e996b5e99a55fe80179980d7c4c5a274",
+  "compiled_result": "0 errors, 0 warnings",
+  "variants": 2,
+  "native_revision_runs_completed": 6,
+  "revision_windows_previously_seen": true,
+  "parameters_grid_searched": false,
+  "native_model_entry_sets_exactly_match_all_revision_runs": true,
+  "unit_tests_passed": 16,
+  "publication_exclusions": [
+    "Saved account credentials or identifiers",
+    "Terminal configuration and backup files",
+    "Private runtime and raw HTML logs",
+    "Continuous historical broker quote data",
+    "Compiled binaries and vendor headers"
+  ],
+  "result": "No demonstrated dependable edge; all gold candidates retained as historical research."
+}

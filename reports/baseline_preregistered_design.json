@@ -1,0 +1,53 @@
+{
+  "registered_on": "2026-10-26",
+  "strategy": "GoldBreakout_Research v1",
+  "rules": {
+    "timeframe": "H1",
+    "breakout_closed_bars": 24,
+    "trend_filter": "closed H1 close vs EMA200",
+    "atr_period": 14,
+    "stop_atr": 2,
+    "target_atr": 4,
+    "maximum_completed_H1_bars_held": 72,
+    "risk_percent": 0.25,
+    "one_position": true,
+    "grid": false,
+    "martingale": false,
+    "max_spread_price_usd": 1.0,
+    "max_spread_to_stop": 0.1,
+    "estimated_roundtrip_commission_per_lot_usd": 7.0,
+    "additional_adverse_slippage_price_per_side_usd": 0.1
+  },
+  "development": [
+    "2026-01-13",
+    "2026-06-30"
+  ],
+  "validation": [
+    "2026-07-01",
+    "2026-08-14"
+  ],
+  "contextual_previously_examined_market_period": [
+    "2026-08-17",
+    "2026-10-23"
+  ],
+  "benchmark": {
+    "runs": 5000,
+    "seed": 20261026,
+    "policies": [
+      "fair coin direction at eligible strategy opportunities",
+      "direction draws preserving strategy long proportion",
+      "long-only at the same opportunities"
+    ],
+    "one_position_per_path": true,
+    "costs": "historical spread plus stated commission and adverse slippage"
+  },
+  "preliminary_acceptance": [
+    "positive validation net return after costs",
+    "above random benchmark 95th percentile",
+    "positive lower 95% weekly-block bootstrap expectancy bound",
+    "does not collapse under doubled additional costs",
+    "at least 30 validation trades otherwise inconclusive"
+  ],
+  "selection_policy": "One frozen hypothesis; no profit-based grid search or changing rules after validation. The contextual period was examined for other bots and is not wholly unseen.",
+  "claim": "No guarantee or claim of a demonstrated edge before evaluation."
+}

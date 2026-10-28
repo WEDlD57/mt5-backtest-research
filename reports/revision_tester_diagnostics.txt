@@ -1,0 +1,12 @@
+2026.06.30 22:59:58   GoldRegimeRetest diagnostics: bars=2618 warmup=49 signals=110 opportunity_rows=110 busy=50 spread_rejected=0 zero_volume=1 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=59 time_exits=0
+2026.06.30 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=110 armed=0 expired=0 regime_rejected=0 session_rejected=1189 market_closed_rejected=0 daily_flat_exits=40
+2026.08.14 22:59:58   GoldRegimeRetest diagnostics: bars=755 warmup=0 signals=31 opportunity_rows=31 busy=11 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=20 time_exits=0
+2026.08.14 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=31 armed=0 expired=0 regime_rejected=0 session_rejected=347 market_closed_rejected=0 daily_flat_exits=13
+2026.10.23 22:59:58   GoldRegimeRetest diagnostics: bars=1147 warmup=0 signals=44 opportunity_rows=44 busy=18 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=26 time_exits=0
+2026.10.23 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=44 armed=0 expired=0 regime_rejected=0 session_rejected=527 market_closed_rejected=0 daily_flat_exits=16
+2026.06.30 22:59:58   GoldRegimeRetest diagnostics: bars=2618 warmup=49 signals=31 opportunity_rows=31 busy=4 spread_rejected=0 zero_volume=1 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=26 time_exits=0
+2026.06.30 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=110 armed=78 expired=29 regime_rejected=6 session_rejected=1189 market_closed_rejected=0 daily_flat_exits=16
+2026.08.14 22:59:58   GoldRegimeRetest diagnostics: bars=755 warmup=0 signals=8 opportunity_rows=8 busy=1 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=7 time_exits=0
+2026.08.14 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=31 armed=23 expired=11 regime_rejected=3 session_rejected=347 market_closed_rejected=0 daily_flat_exits=5
+2026.10.23 22:59:58   GoldRegimeRetest diagnostics: bars=1147 warmup=0 signals=12 opportunity_rows=12 busy=1 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=11 time_exits=0
+2026.10.23 22:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=44 armed=32 expired=16 regime_rejected=1 session_rejected=527 market_closed_rejected=0 daily_flat_exits=7

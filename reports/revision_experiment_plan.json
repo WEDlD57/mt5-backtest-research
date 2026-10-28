@@ -1,0 +1,49 @@
+{
+  "created": "2026-10-28",
+  "purpose": "Transfer execution and retest/regime lessons from earlier EURUSD research without claiming they validate gold.",
+  "variants": {
+    "operations_only": {
+      "retest_regime": false,
+      "entry": "Frozen v1 H1 24-bar breakout with EMA200",
+      "new_controls": "Actual broker trade sessions; entries from 07:00 until 19:30 server time, Friday 16:30; close at 20:00, Friday 17:00; unchanged risk and stops."
+    },
+    "regime_retest": {
+      "retest_regime": true,
+      "entry": "After a breakout, require a later closed H1 retest within 3 bars: low/high within 0.25 ATR of armed level, close beyond level by 0.02 ATR, EMA200 aligned, ADX14>=18 and nondecreasing.",
+      "new_controls": "Same operations controls"
+    }
+  },
+  "fixed_risk": {
+    "simulated_balance": 100000,
+    "risk_pct": 0.25,
+    "SL_ATR": 2,
+    "TP_ATR": 4
+  },
+  "windows": {
+    "development": [
+      "2026.01.13",
+      "2026.07.01"
+    ],
+    "previously_seen_validation": [
+      "2026.07.01",
+      "2026.08.15"
+    ],
+    "previously_seen_context": [
+      "2026.08.17",
+      "2026.10.24"
+    ]
+  },
+  "selection_disclosure": "Every window has already been viewed. Revisions are exploratory comparisons, not fresh out-of-sample validation. Retain both variants and all outcomes; no parameter grid search.",
+  "prior_evidence": {
+    "EURUSD_original_reference_net": 496.25,
+    "EURUSD_original_later_net": 21.72,
+    "EURUSD_checked_reference_net": 443.06,
+    "EURUSD_checked_later_net": 21.11,
+    "direct_breakout_checkedEURUSD_reference_net": -53.99,
+    "direct_breakout_checkedEURUSD_later_net": -394.47,
+    "round2_saved_complete": 36,
+    "round2_saved_failed": 1,
+    "round2_planned": 40
+  },
+  "publishing": "Publish research source and aggregate simulated backtests after privacy review; exclude broker account configurations and private credentials."
+}

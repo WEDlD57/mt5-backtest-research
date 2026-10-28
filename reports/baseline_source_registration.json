@@ -1,0 +1,31 @@
+{
+  "frozen_on": "2026-10-28 before first custom strategy return evaluation",
+  "strategy_source_sha256": "7a041310244129e9ec6d36f700ff61432819d7e1069f5f3e933dfcdb3f972267",
+  "rules_file_sha256": "ea7bd0e99a1107caf5fb7a74b476d21570e5f469ea8fe8119a31674935055a21",
+  "price_data_sha256": "00fbebf957f9e758cdde2c92b2a7036f031fb1009ef41c776363445de02363b2",
+  "hypotheses_tried": 1,
+  "parameters_optimized": false,
+  "implementation_amendments": [
+    {
+      "date": "2026-10-28",
+      "reason": "Native test showed every bar stuck in warm-up because BarsCalculated was checked before the first lazy CopyBuffer calculation; replaced it with available-series history count. No entry, exit, risk, or cost parameters changed. Validation has not been inspected.",
+      "previous_source_sha256": "b73d328847816d1358294dc4621684a0c8d7e0e9fa951311e9552c4514098c9d"
+    }
+  ],
+  "capacity_study": {
+    "registered_before_validation_on": "2026-10-28",
+    "simulated_initial_balance_usd": 100000,
+    "same_strategy_source": true,
+    "same_risk_percent": 0.25,
+    "reason": "Only two trades at10k because minimum gold volume cannot express most intended stop-risk sizes; larger virtual balance tests capacity without changing entry/exit or risk parameters.",
+    "not_live_funds": true
+  },
+  "execution_model_corrections": [
+    "Use fresh runtime-verified USD-per-lot swap mode and weekday multipliers.",
+    "A July7 22:00 nativeMarketClosed rejection exposed missing session restrictions in the independent simulator.",
+    "A July14 midnight short target in the independent model did not match native fills; replace reconstructed ask prices with independently exported native-tick bid/ask OHLC.",
+    "These correct benchmark execution assumptions; entry/exit/risk rules and source remain frozen."
+  ],
+  "strategy_source_unchanged_after_validation": true,
+  "cost_accounting_note": "Native journal processing tops up actual commission to the declared USD7/lot target rather than adding the full target on top of native broker fees. Strategy and accepted cost budget unchanged."
+}
