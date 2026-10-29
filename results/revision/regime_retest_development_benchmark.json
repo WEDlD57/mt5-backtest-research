@@ -1,0 +1,178 @@
+{
+  "label": "regime_retest_development",
+  "period_start_inclusive": "2026-01-13",
+  "period_end_exclusive": "2026-07-01",
+  "status": "edge_not_established",
+  "selection_disclosure": "All periods were previously viewed before v2 design; neither variant is fresh out-of-sample evidence. Both variants and every result are retained.",
+  "initial_balance_usd": 100000.0,
+  "raw_signal_opportunities": 31,
+  "seed": 20261026,
+  "simulations_per_random_policy": 5000,
+  "actual_policy_same_engine": {
+    "net_usd": -808.9799999999814,
+    "return_pct": -0.8089799999999814,
+    "trades": 26,
+    "win_rate_pct": 46.15384615384615,
+    "long_trades": 9,
+    "net_expectancy_R": -0.14084271229912362,
+    "closed_balance_max_drawdown_pct": 1.1914776707886066,
+    "profit_factor_after_modeled_costs": 0.6556271656861662,
+    "skips": {
+      "busy": 4,
+      "minimum_volume_or_budget": 1,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 0
+    }
+  },
+  "fair_coin_policy": {
+    "simulations": 5000,
+    "return_pct_quantiles": {
+      "p05": -2.144946000000004,
+      "p50": -0.5880549999999818,
+      "p95": 0.9984590000000038
+    },
+    "probability_of_positive_return": 0.2722,
+    "observed_percentile": 41.56,
+    "benchmark_upper_tail_probability": 0.5844831033793242,
+    "trade_count_min_median_max": [
+      26.0,
+      27.0,
+      28.0
+    ],
+    "interpretation": "Conditional random-policy benchmark rank; not a formal exchangeable permutation p-value."
+  },
+  "long_bias_control_probability": 0.34615384615384615,
+  "long_bias_control_policy": {
+    "simulations": 5000,
+    "return_pct_quantiles": {
+      "p05": -2.1181379999999876,
+      "p50": -0.6351549999999706,
+      "p95": 0.8230185000000335
+    },
+    "probability_of_positive_return": 0.2418,
+    "observed_percentile": 42.44,
+    "benchmark_upper_tail_probability": 0.5756848630273945,
+    "trade_count_min_median_max": [
+      26.0,
+      27.0,
+      28.0
+    ],
+    "interpretation": "Conditional random-policy benchmark rank; not a formal exchangeable permutation p-value."
+  },
+  "long_only_policy": {
+    "net_usd": -404.3199999999779,
+    "return_pct": -0.40431999999998025,
+    "trades": 27,
+    "win_rate_pct": 51.85185185185185,
+    "long_trades": 27,
+    "net_expectancy_R": -0.04485827725617887,
+    "closed_balance_max_drawdown_pct": 0.9037136837391836,
+    "profit_factor_after_modeled_costs": 0.8304538897648336,
+    "skips": {
+      "busy": 3,
+      "minimum_volume_or_budget": 1,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 0
+    }
+  },
+  "doubled_additional_costs": {
+    "net_usd": -849.2099999999919,
+    "return_pct": -0.8492099999999891,
+    "trades": 26,
+    "win_rate_pct": 46.15384615384615,
+    "long_trades": 9,
+    "net_expectancy_R": -0.14756384589472893,
+    "closed_balance_max_drawdown_pct": 1.2257079689348014,
+    "profit_factor_after_modeled_costs": 0.641754588752442,
+    "skips": {
+      "busy": 4,
+      "minimum_volume_or_budget": 1,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 0
+    }
+  },
+  "weekly_block_bootstrap": {
+    "unit": "calendar week, grouped by trade exit, including zero-trade weeks",
+    "calendar_weeks": 25,
+    "zero_trade_weeks": 8,
+    "replications": 5000,
+    "valid_nonempty_replications": 5000,
+    "net_expectancy_R_95pct_interval": [
+      -0.38958341732129276,
+      0.1628228510662075
+    ],
+    "distinct_entry_days": 25,
+    "limitation": "Few calendar blocks give imprecise intervals; days and trades are not assumed independent."
+  },
+  "preliminary_gates": {
+    "positive_net_return": false,
+    "above_fair_coin_95th_percentile": false,
+    "above_long_bias_control_95th_percentile": false,
+    "positive_weekly_bootstrap_lower_bound": false,
+    "positive_after_doubled_additional_costs": false,
+    "at_least_30_trades": false
+  },
+  "funding": {
+    "mode": 9,
+    "verified_mode_name": "SYMBOL_SWAP_MODE_CURRENCY_PROFIT",
+    "calculation": "Native-verified CURRENCY_PROFIT mode 9; profit currency USD; static exported rates per lot.",
+    "weekday_multipliers": [
+      0.0,
+      1.0,
+      1.0,
+      3.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "weekday_schedule_exported": true,
+    "limitation": "Static exported rates and midnight broker-server rollover are used; historical rate changes are unavailable.",
+    "reference": "https://www.mql5.com/en/docs/constants/environment_state/marketinfoconstants"
+  },
+  "costs": {
+    "historical_entry_spread": "native opportunity quote",
+    "exit_spread": "Separate native ask/bid quote OHLC",
+    "roundtrip_commission_usd_per_lot": 7.0,
+    "adverse_slippage_price_per_side_usd": 0.1,
+    "total_extra_cost_usd_per_lot": 27.0,
+    "stress_multiplier_on_extra_costs": 2.0
+  },
+  "execution_dataset": {
+    "type": "native real-tick bid/ask quotes aggregated to M1",
+    "file": "CodexGold_QuoteM1_20261028.csv",
+    "actual_ask_OHLC": true,
+    "broker_trade_sessions_applied": true,
+    "partial_session_boundary_minutes": 0,
+    "zero_length_session_rows_treated_closed": 0,
+    "period_end": "Forced native-tester settlement at actual last quote, including closed sessions."
+  },
+  "source_hashes": {
+    "regime_retest_development_GoldRegimeRetest_Opportunities_20261028.csv": "d766598dbeff12609658e0ffb5ac70776970513de74bfb304d2f5653a48e8bb0",
+    "CodexGold_QuoteM1_20261028.csv": "9e1db93568b6a8423c0044acb7dd52267631055b4ea33a8a176783db6e96fc15",
+    "benchmark_revision.py": "eebbe9435bb036245f4ad98ea3c3ed7a6635f4201a575c17f646221678bb40ab",
+    "CodexGold_trade_sessions_20261028.csv": "ded69257114a5a1361cf5e4e621784ac537ca7705303c36c7cadd1c9bca0d388"
+  },
+  "limitations": [
+    "All policies share strategy-conditioned opportunity times. This evaluates directional choices conditional on that timing, not arbitrary timing skill.",
+    "Random trade directions change holding periods and therefore trade counts; every path enforces one position.",
+    "The long-bias control uses the observed executed-trade long proportion as a Bernoulli probability; exact counts are not fixed.",
+    "Separately aggregated bid/ask quote OHLC is used when available; legacy fallback approximates asks from bid bars and spread snapshots.",
+    "Trades cannot enter or touch SL/TP outside broker trade sessions. Partial session-boundary minute OHLC can contain closed-session quotes and remains approximate.",
+    "Daily flat exits wait for the first quoted tradable minute at/after 20:00 broker-server time, or Friday 17:00; the unchanged 72-H1-bar limit also applies. Within-minute ordering and seconds remain approximate, with adverse same-minute SL/TP priority.",
+    "Drawdown is based on closed balances and excludes open-position mark-to-market excursions.",
+    "Native MT5 and same-engine actual-policy results must be compared before interpreting benchmark ranks.",
+    "These results are a historical conditional benchmark, not proof of future profitability or a formal randomized experiment."
+  ],
+  "native_entry_comparison": {
+    "native_entries": 26,
+    "modeled_entries": 26,
+    "entry_sets_equal": true,
+    "native_only": [],
+    "modeled_only": [],
+    "native_deals_sha256": "6108ca93f14e3e28cb8e73e0a24114ceb7c86b2e389031f48922c7ddc00f2dbb",
+    "interpretation": "MT5 is primary. Minute aggregation and additional-cost sizing can cause differences; discrepancies have not been forced to match."
+  }
+}

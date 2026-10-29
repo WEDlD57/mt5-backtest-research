@@ -1,0 +1,21 @@
+{
+  "label": "regime_retest_development",
+  "native_trades": 26,
+  "native_wins_after_added_costs": 12,
+  "net_before_additional_costs_usd": -797.5,
+  "additional_cost_usd": 32.78,
+  "adjusted_net_usd": -830.28,
+  "adjusted_return_pct": -0.83028,
+  "adjusted_win_rate_pct": 46.15384615384615,
+  "adjusted_closed_balance_max_drawdown_pct": 1.2120657295749118,
+  "doubled_additional_cost_return_pct": -0.87051,
+  "median_native_risk_usd_per_price_unit_per_lot": 100.0,
+  "median_contract_from_native_deals": 100.0,
+  "native_swap_usd": 0.0,
+  "initial_simulated_balance_usd": 100000.0,
+  "trades_without_matched_planned_risk": 0,
+  "journal_validation": "complete positions; balanced entry/exit volume; no inout reversals",
+  "status": "complete",
+  "extra_cost_model": "Native fees retained; commission topped up to at least USD7/lot roundtrip, plus USD20/lot adverse slippage. Stress targets USD14 commission plus USD40 slippage, without double-counting native fees. Assumes USD gold and a 100-unit contract for the fixed slippage allowance.",
+  "limitation": "Additional costs are journal overlays; native position sizing used broker-reported account equity before these extra overlays. Closed-balance drawdown uses completed positions and excludes open-position excursions. Planned stop risk is matched only to an exact entry timestamp."
+}
