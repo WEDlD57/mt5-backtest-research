@@ -1,0 +1,122 @@
+[
+  {
+    "label": "operations_only_context_seen",
+    "return_pct": -0.07604000000002165,
+    "trades": 26,
+    "coin_percentile": 55.94,
+    "bias_percentile": 51.0,
+    "net_expectancy_R_CI": [
+      -0.3147003415546273,
+      0.36408123181772817
+    ],
+    "gates": {
+      "positive_net_return": false,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": false,
+      "at_least_30_trades": false
+    },
+    "entrysets_equal": true
+  },
+  {
+    "label": "operations_only_development",
+    "return_pct": 1.5752200000000105,
+    "trades": 59,
+    "coin_percentile": 86.4,
+    "bias_percentile": 79.62,
+    "net_expectancy_R_CI": [
+      -0.11417470499421034,
+      0.3423395755167584
+    ],
+    "gates": {
+      "positive_net_return": true,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": true,
+      "at_least_30_trades": true
+    },
+    "entrysets_equal": true
+  },
+  {
+    "label": "operations_only_validation_seen",
+    "return_pct": -0.20523999999997322,
+    "trades": 20,
+    "coin_percentile": 27.88,
+    "bias_percentile": 27.339999999999996,
+    "net_expectancy_R_CI": [
+      -0.5025014232883029,
+      0.3914868430233929
+    ],
+    "gates": {
+      "positive_net_return": false,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": false,
+      "at_least_30_trades": false
+    },
+    "entrysets_equal": true
+  },
+  {
+    "label": "regime_retest_context_seen",
+    "return_pct": 0.4041400000000195,
+    "trades": 11,
+    "coin_percentile": 58.879999999999995,
+    "bias_percentile": 50.44,
+    "net_expectancy_R_CI": [
+      -0.48561197473679857,
+      0.7854983996738816
+    ],
+    "gates": {
+      "positive_net_return": true,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": true,
+      "at_least_30_trades": false
+    },
+    "entrysets_equal": true
+  },
+  {
+    "label": "regime_retest_development",
+    "return_pct": -0.8089799999999814,
+    "trades": 26,
+    "coin_percentile": 41.56,
+    "bias_percentile": 42.44,
+    "net_expectancy_R_CI": [
+      -0.38958341732129276,
+      0.1628228510662075
+    ],
+    "gates": {
+      "positive_net_return": false,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": false,
+      "at_least_30_trades": false
+    },
+    "entrysets_equal": true
+  },
+  {
+    "label": "regime_retest_validation_seen",
+    "return_pct": 0.5236000000000018,
+    "trades": 7,
+    "coin_percentile": 66.64,
+    "bias_percentile": 56.220000000000006,
+    "net_expectancy_R_CI": [
+      -0.8077043191049015,
+      1.120756230208863
+    ],
+    "gates": {
+      "positive_net_return": true,
+      "above_fair_coin_95th_percentile": false,
+      "above_long_bias_control_95th_percentile": false,
+      "positive_weekly_bootstrap_lower_bound": false,
+      "positive_after_doubled_additional_costs": true,
+      "at_least_30_trades": false
+    },
+    "entrysets_equal": true
+  }
+]
