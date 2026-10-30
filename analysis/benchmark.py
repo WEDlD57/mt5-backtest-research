@@ -395,17 +395,24 @@ def weekly_bootstrap(trades: list[dict[str, Any]], start: str, end: str, rng: np
         period = pd.Timestamp(trade["exit_time"]).to_period("W-SUN")
         j = weeks.get_loc(period)
         sums[j] += trade["net_R"]; counts[j] += 1
+    nonempty_weeks = int(np.count_nonzero(counts))
+    metadata = {"unit": "calendar week, grouped by trade exit, including zero-trade weeks",
+                "calendar_weeks": len(weeks), "zero_trade_weeks": int(np.sum(counts == 0)),
+                "nonempty_weekly_blocks": nonempty_weeks,
+                "distinct_entry_days": len({trade["entry_time"][:10] for trade in trades}),
+                "limitation": "Intervals require at least two calendar and two nonempty weekly blocks. Two blocks are only a computational safeguard, not adequate evidence; few blocks give imprecise intervals, and days and trades are not assumed independent."}
+    if len(weeks) < 2 or nonempty_weeks < 2:
+        return {**metadata, "interval_status": "insufficient_weekly_blocks",
+                "replications": 0, "valid_nonempty_replications": 0,
+                "net_expectancy_R_95pct_interval": [None, None]}
     sample = rng.integers(0, len(weeks), size=(N_SIMULATIONS, len(weeks)))
     total_count = counts[sample].sum(axis=1)
     means = np.divide(sums[sample].sum(axis=1), total_count, out=np.full(N_SIMULATIONS, np.nan), where=total_count > 0)
     valid = means[np.isfinite(means)]
     ci = list(map(float, np.quantile(valid, [.025, .975]))) if len(valid) else [None, None]
-    return {"unit": "calendar week, grouped by trade exit, including zero-trade weeks",
-            "calendar_weeks": len(weeks), "zero_trade_weeks": int(np.sum(counts == 0)),
+    return {**metadata, "interval_status": "available",
             "replications": N_SIMULATIONS, "valid_nonempty_replications": len(valid),
-            "net_expectancy_R_95pct_interval": ci,
-            "distinct_entry_days": len({trade["entry_time"][:10] for trade in trades}),
-            "limitation": "Few calendar blocks give imprecise intervals; days and trades are not assumed independent."}
+            "net_expectancy_R_95pct_interval": ci}
 
 
 def load_market(data: Path, swap_name: str | None) -> Market:
