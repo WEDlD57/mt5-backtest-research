@@ -1,0 +1,25 @@
+{
+  "recorded_client_date": "2026-10-30",
+  "source_frozen_date": "2026-10-28",
+  "start_inclusive": "2026.10.26",
+  "end_exclusive": "2026.10.30",
+  "period_basis": "broker-server dates",
+  "classification": "Previously unexamined historical extension; not wholly prospective and not a preregistration before the price period existed.",
+  "variants": [
+    "operations_only",
+    "regime_retest"
+  ],
+  "parameters_changed": false,
+  "source_sha256": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+  "installed_binary_sha256": "06db7ad45cae5b431dc408cd28136cd5e996b5e99a55fe80179980d7c4c5a274",
+  "initial_simulated_balance_usd": 100000,
+  "risk_percent": 0.25,
+  "purpose": "Check execution and record all outcomes on the next unexamined completed days. Four days cannot establish a trading edge.",
+  "coverage_required_days": [
+    "2026.10.26",
+    "2026.10.27",
+    "2026.10.28",
+    "2026.10.29"
+  ],
+  "live_trading": false
+}

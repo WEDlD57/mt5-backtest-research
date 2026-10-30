@@ -1,0 +1,55 @@
+{
+  "operations_only": {
+    "native_trades": 1,
+    "complete_balanced_journal": true,
+    "overnight_positions": 0,
+    "native_swap_usd": 0,
+    "preset_verified": true,
+    "history_quality_reported": "100%",
+    "missing_planned_risk_matches": 0
+  },
+  "regime_retest": {
+    "native_trades": 0,
+    "complete_balanced_journal": true,
+    "overnight_positions": 0,
+    "native_swap_usd": 0,
+    "preset_verified": true,
+    "history_quality_reported": "100%",
+    "missing_planned_risk_matches": 0
+  },
+  "coverage_of_07_to_20_including_close": {
+    "2026.10.26": {
+      "entry_and_flat_window_missing_quote_minutes": 0,
+      "close_minute_present": true
+    },
+    "2026.10.27": {
+      "entry_and_flat_window_missing_quote_minutes": 0,
+      "close_minute_present": true
+    },
+    "2026.10.28": {
+      "entry_and_flat_window_missing_quote_minutes": 0,
+      "close_minute_present": true
+    },
+    "2026.10.29": {
+      "entry_and_flat_window_missing_quote_minutes": 0,
+      "close_minute_present": true
+    }
+  },
+  "real_tick_quality_messages": [
+    "XAUUSD,H1 (broker server): generating based on real ticks",
+    "XAUUSD : real ticks begin from 2026.01.13 00:00:00",
+    "XAUUSD,H1 (broker server): generating based on real ticks",
+    "XAUUSD : real ticks begin from 2026.01.13 00:00:00",
+    "XAUUSD,H1 (broker server): generating based on real ticks",
+    "XAUUSD : real ticks begin from 2026.01.13 00:00:00"
+  ],
+  "real_tick_fallback_warning_detected": false,
+  "diagnostics": [
+    "2026.10.29 23:59:58   Quote trace complete: 5460 minutes, 2048063 ticks; actual tester bid/ask OHLC, broker-server time.",
+    "2026.10.29 23:59:58   GoldRegimeRetest diagnostics: bars=91 warmup=0 signals=2 opportunity_rows=2 busy=1 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=1 time_exits=0",
+    "2026.10.29 23:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=2 armed=0 expired=0 regime_rejected=0 session_rejected=39 market_closed_rejected=0 daily_flat_exits=1",
+    "2026.10.29 23:59:58   GoldRegimeRetest diagnostics: bars=91 warmup=0 signals=0 opportunity_rows=0 busy=0 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=0 time_exits=0",
+    "2026.10.29 23:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=2 armed=2 expired=1 regime_rejected=0 session_rejected=39 market_closed_rejected=0 daily_flat_exits=0"
+  ],
+  "public_unit_tests_passed_after_guard_fix": 24
+}
