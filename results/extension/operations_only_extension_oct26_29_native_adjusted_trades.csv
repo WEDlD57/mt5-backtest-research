@@ -1,0 +1,2 @@
+entry_time,exit_time,direction,lots,gross_profit_usd,swap_usd,native_commission_and_fee_usd,native_net_usd,additional_cost_usd,adjusted_net_usd,doubled_additional_cost_net_usd,planned_stop_risk_usd,adjusted_net_R,effective_contract_from_deals
+2026-10-29T07:00:00,2026-10-29T20:00:00,-1,0.06,73.08,0.0,-0.3,72.78,1.32,71.46,69.84,244.86,0.29184023523646163,100.0
