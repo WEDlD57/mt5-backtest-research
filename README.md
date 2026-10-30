@@ -18,6 +18,10 @@ Returns include recorded native costs plus a commission top-up and adverse-slipp
 
 The initial USD 10,000 gold test generated only two trades because minimum lot sizes often exceeded its risk budget. The larger simulated balance studies that execution constraint; it is not a funding recommendation.
 
+## October 26–29 extension
+
+An unchanged-rule check on the next four previously unbacktested days produced **+0.07146% on one trade** for the hours-only profile and **zero trades** for the retest profile. This is descriptive evidence only. The period is not wholly prospective because it partly precedes the October 28 source freeze. A single week cannot support a weekly confidence interval; that reporting edge case is now guarded, and 24 tests pass. [New-period report](reports/EXTENSION_2026-10-26_29.md) · [Fixed future validation plan](reports/NEXT_VALIDATION.md).
+
 ## Programs and evidence
 
 - [Original breakout EA](ea/GoldBreakout_Research.mq5): H1 closed 24-bar breakout, EMA200 filter, ATR14, 2-ATR stop, 4-ATR target, one position, maximum 72 completed hourly bars.
@@ -25,7 +29,7 @@ The initial USD 10,000 gold test generated only two trades because minimum lot s
 - [Full results and limits](reports/RESULTS.md), [native execution verification](reports/revision_verification.json), [earlier EURUSD findings](reports/PRIOR_RESEARCH.md), and [public-source bot checks](reports/THIRD_PARTY_BOTS.md).
 - `data/`: simulated native deals and signal opportunities. Position/deal identifiers belong to test simulations and identify no live account.
 - `results/`: native cost-adjusted summaries, modeled trade journals, benchmark reports and random-return distributions, including losing cases.
-- `analysis/`: portable journal summarizer, independent benchmark engines and chart builder. `tests/` contains 16 execution and accounting checks.
+- `analysis/`: portable journal summarizer, independent benchmark engines and chart builder. `tests/` contains 24 execution, accounting and statistical checks.
 
 Every trading program refuses to initialize on a trading chart and runs only in the Strategy Tester. There is no continuous trading service in this repository. The native code compiled with zero errors and warnings. In all six revised native runs, journal volumes balanced, no positions crossed midnight, swaps were zero, and no orders were rejected or attempted while the broker market was closed. Native/model entry sets matched exactly, while small return differences remain from minute aggregation and execution details.
 
