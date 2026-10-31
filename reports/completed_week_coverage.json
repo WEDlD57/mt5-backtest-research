@@ -1,0 +1,14 @@
+{
+  "first_quote_minute": "2026.10.26 00:00",
+  "last_quote_minute": "2026.10.30 21:59",
+  "minutes_by_day": {
+    "2026.10.26": 1320,
+    "2026.10.27": 1380,
+    "2026.10.28": 1380,
+    "2026.10.29": 1380,
+    "2026.10.30": 1320
+  },
+  "tester_ticks": 2688500,
+  "quote_file_sha256": "13e158f9bd68f78f5a6db6aff3fb75ffa77ef707f4e24a458a923d21dec422d5",
+  "complete_for_planned_days": true
+}

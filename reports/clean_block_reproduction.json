@@ -1,0 +1,22 @@
+{
+  "status": "exact_execution_input_values_reproduced",
+  "rows": 279467,
+  "quote_fields": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "ask_open",
+    "ask_high",
+    "ask_low",
+    "ask_close",
+    "tick_volume"
+  ],
+  "timestamp_fields": [
+    "time",
+    "first_tick_time_utc",
+    "last_tick_time_utc"
+  ],
+  "CSV_serialization_may_differ": true,
+  "raw_quotes_redistributed": false
+}
