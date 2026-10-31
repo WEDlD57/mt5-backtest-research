@@ -1,0 +1,77 @@
+{
+  "classification": "Previously unexamined native-week signal parity check; no parameter or source changes",
+  "window_start_inclusive": "2026-10-26",
+  "window_end_exclusive": "2026-10-31",
+  "time_basis": "Original broker-server timestamps",
+  "inputs": {
+    "old_chart_M1_sha256": "00fbebf957f9e758cdde2c92b2a7036f031fb1009ef41c776363445de02363b2",
+    "new_tick_M1_sha256": "13e158f9bd68f78f5a6db6aff3fb75ffa77ef707f4e24a458a923d21dec422d5",
+    "session_file_sha256": "d7f20c13258a6eaacac0361f4e7cd55a12a2730dea9bc3fd7a95d08df9740c25"
+  },
+  "old_chart_last_minute": "2026-10-23 22:58:00",
+  "new_quote_first_minute": "2026-10-26 00:00:00",
+  "signal_module_sha256": "7f99e63576928612464934eaf7f3c98fa16f02d320ce57ba29bd604352910c9f",
+  "source_limitations": [
+    "The old chart export ends at 2026-10-23 22:58; it does not contain that final hour's final minute.",
+    "New-week H1 bars are aggregated from tick bid quotes rather than the separate broker chart archive.",
+    "No prices are filled, patched or refitted to make indicator values match."
+  ],
+  "results": [
+    {
+      "variant": "operations_only",
+      "native_opportunities": 6,
+      "replicated_opportunities": 6,
+      "matched_minute_direction_opportunities": 6,
+      "missing": [],
+      "extra": [],
+      "max_absolute_field_deltas": {
+        "ATR": 4.290789945571305e-11,
+        "ema": 0.002209063619375229,
+        "ADX": 0.0,
+        "armed_level": 0.0,
+        "armed_age": 0,
+        "entrybid": 0.0
+      },
+      "new_quote_ask_open_max_delta": 0.0,
+      "exact_second_matches": 6,
+      "replica_diagnostics": {
+        "bars": 112,
+        "outside_entry_window": 50,
+        "warmup": 0,
+        "raw_breakouts": 6,
+        "armed": 0,
+        "expired": 0,
+        "regime_rejected": 0,
+        "signal_opportunities": 6
+      }
+    },
+    {
+      "variant": "regime_retest",
+      "native_opportunities": 1,
+      "replicated_opportunities": 1,
+      "matched_minute_direction_opportunities": 1,
+      "missing": [],
+      "extra": [],
+      "max_absolute_field_deltas": {
+        "ATR": 4.290789945571305e-11,
+        "ema": 0.001720416833904892,
+        "ADX": 1.2533973858808167e-11,
+        "armed_level": 0.0,
+        "armed_age": 0,
+        "entrybid": 0.0
+      },
+      "new_quote_ask_open_max_delta": 0.0,
+      "exact_second_matches": 1,
+      "replica_diagnostics": {
+        "bars": 112,
+        "outside_entry_window": 50,
+        "warmup": 0,
+        "raw_breakouts": 6,
+        "armed": 4,
+        "expired": 1,
+        "regime_rejected": 0,
+        "signal_opportunities": 1
+      }
+    }
+  ]
+}

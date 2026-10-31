@@ -1,0 +1,31 @@
+{
+  "native_minute_direction_opportunities": 236,
+  "replicated_opportunities": 236,
+  "matching_minute_direction_opportunities": 236,
+  "matching_exact_seconds": 233,
+  "native_second_level_differences": [
+    {
+      "native": "2026-02-09 17:00:01",
+      "replica": "2026-02-09 17:00:00"
+    },
+    {
+      "native": "2026-02-19 08:00:01",
+      "replica": "2026-02-19 08:00:00"
+    },
+    {
+      "native": "2026-02-20 15:00:01",
+      "replica": "2026-02-20 15:00:00"
+    }
+  ],
+  "max_abs_indicator_rounding_difference": 5.002220859751105e-11,
+  "unit_tests_passed": 8,
+  "indicator_sources": {
+    "Examples/ATR.mq5": "20e53e1857a0aa342c97f312a6f3f273ece06fe742079fda01e87f231d7f9e80",
+    "Examples/ADX.mq5": "09fea97100a524efdf0f6ed7c16b44564c0be69c170e81eee6569a5ddf25dcaf",
+    "Examples/Custom Moving Average.mq5": "bfb490b0c6c77b96c1d51f780a974f9d8f5f4877d0be73905dd7f66ddd05c54c",
+    "Include/MovingAverages.mqh": "1b4f2e671af46e881c3a9c31f0d324caac165232f4987247bb2819e0e390d8c5"
+  },
+  "strategy_source_sha256": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+  "input_bid_m1_sha256": "00fbebf957f9e758cdde2c92b2a7036f031fb1009ef41c776363445de02363b2",
+  "signal_module_sha256": "7f99e63576928612464934eaf7f3c98fa16f02d320ce57ba29bd604352910c9f"
+}
