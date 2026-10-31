@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "scope": "January 2023 ZIP only; no downloads and no performance analysis",
+  "converter": "histdata_ticks.py",
+  "source_archive": "XAUUSD_T_202301.zip",
+  "source_zip_sha256": "4786f42be652e22eb9ae9f567301b744ff0c0bc03b9fd6ff60173cc86c33a4a2",
+  "canonical_csv": "histdata_XAUUSD_bidask_M1_UTC_202301.csv",
+  "canonical_sha256": "c66bd280c6ca721cbe4889f50f151f59aebbb5301ac345f18106261c05ff1f00",
+  "converted_csv": "converter_jan2023_probe.csv",
+  "converted_sha256": "1d4095d54e27f46571031b79e82e439a2ff70a9d965fced2eb27a5825d8446e8",
+  "quote_rows": 3609301,
+  "minute_rows": 28914,
+  "exact_checks": {
+    "minute_index_exact": true,
+    "open_exact": true,
+    "high_exact": true,
+    "low_exact": true,
+    "close_exact": true,
+    "ask_open_exact": true,
+    "ask_high_exact": true,
+    "ask_low_exact": true,
+    "ask_close_exact": true,
+    "tick_volume_exact": true,
+    "first_tick_time_utc_exact": true,
+    "last_tick_time_utc_exact": true
+  },
+  "spread_price_max_absolute_differences": {
+    "spread_price_min": 0.0,
+    "spread_price_max": 0.0,
+    "spread_price_open": 0.0
+  },
+  "virtual_spread_matches_min_actual_price_spread": true,
+  "elapsed_seconds": 11.818
+}

@@ -1,0 +1,36 @@
+{
+  "status": "exploratory_quality_selected_block_only",
+  "original_full_year_status": "NOT RUN: failed clock gate",
+  "source_manifest_sha256": "380f4dd921ff47ee5e540296ab23bd6d415b8e83caf185a93b3325249ac6a4bd",
+  "input_file": "histdata_XAUUSD_clean_block_20221101_20231001.csv",
+  "input_sha256": "9fa24eded1debe92e1cf2f62a6e4087d3c9ea0b23dfe2b55788ad79cba5a639c",
+  "warmup_start": "2022-11-01",
+  "evaluation_start": "2023-01-01",
+  "evaluation_end_exclusive": "2023-10-01",
+  "selected_source_months": [
+    "2022-11",
+    "2022-12",
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09"
+  ],
+  "failed_excluded_months": [
+    "2022-10",
+    "2023-10"
+  ],
+  "later_valid_months_not_evaluated": [
+    "2023-11",
+    "2023-12"
+  ],
+  "continuous_input_rows": 279467,
+  "evaluation_input_rows": 220931,
+  "raw_input_redistributed": false,
+  "source_clock": "Provider-declared fixed EST converted by+5hours; actual UTC alignment is not independently certified.",
+  "selection_note": "Clock-quality selection and plan amendment recorded before any independent-feed strategy returns. No quote repair or imputation."
+}

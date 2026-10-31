@@ -1,0 +1,83 @@
+{
+  "prior_four_day_common_minutes": 5460,
+  "prior_four_day_changed_minutes": [
+    "2026.10.29 23:59"
+  ],
+  "boundary_note": "Only the prior run's final23:59minute changed: its last tick was23:59:58; the longer test includesnine additionalticks through23:59:59. No quote correction or imputation was performed.",
+  "coverage": {
+    "2026.10.26": {
+      "missing_minutes_in_entry_and_flat_window": 0,
+      "daily_flat_hour": 20
+    },
+    "2026.10.27": {
+      "missing_minutes_in_entry_and_flat_window": 0,
+      "daily_flat_hour": 20
+    },
+    "2026.10.28": {
+      "missing_minutes_in_entry_and_flat_window": 0,
+      "daily_flat_hour": 20
+    },
+    "2026.10.29": {
+      "missing_minutes_in_entry_and_flat_window": 0,
+      "daily_flat_hour": 20
+    },
+    "2026.10.30": {
+      "missing_minutes_in_entry_and_flat_window": 0,
+      "daily_flat_hour": 17
+    }
+  },
+  "variants": {
+    "operations_only": {
+      "trades": 3,
+      "complete_balanced_journal": true,
+      "overnight_positions": 0,
+      "swap_usd": 0,
+      "preset_verified": true,
+      "weekly_bootstrap": {
+        "unit": "calendar week, grouped by trade exit, including zero-trade weeks",
+        "calendar_weeks": 1,
+        "zero_trade_weeks": 0,
+        "nonempty_weekly_blocks": 1,
+        "distinct_entry_days": 2,
+        "limitation": "Intervals require at least two calendar and two nonempty weekly blocks. Two blocks are only a computational safeguard, not adequate evidence; few blocks give imprecise intervals, and days and trades are not assumed independent.",
+        "interval_status": "insufficient_weekly_blocks",
+        "replications": 0,
+        "valid_nonempty_replications": 0,
+        "net_expectancy_R_95pct_interval": [
+          null,
+          null
+        ]
+      }
+    },
+    "regime_retest": {
+      "trades": 1,
+      "complete_balanced_journal": true,
+      "overnight_positions": 0,
+      "swap_usd": 0,
+      "preset_verified": true,
+      "weekly_bootstrap": {
+        "unit": "calendar week, grouped by trade exit, including zero-trade weeks",
+        "calendar_weeks": 1,
+        "zero_trade_weeks": 0,
+        "nonempty_weekly_blocks": 1,
+        "distinct_entry_days": 1,
+        "limitation": "Intervals require at least two calendar and two nonempty weekly blocks. Two blocks are only a computational safeguard, not adequate evidence; few blocks give imprecise intervals, and days and trades are not assumed independent.",
+        "interval_status": "insufficient_weekly_blocks",
+        "replications": 0,
+        "valid_nonempty_replications": 0,
+        "net_expectancy_R_95pct_interval": [
+          null,
+          null
+        ]
+      }
+    }
+  },
+  "session_metadata_changed": true,
+  "session_metadata_note": "Current symbol metadata is00:00\u201323:00 weekdays, differing from the earlier snapshot. All intended entry and closing windows remain covered; historical permissions are not assumed immutable.",
+  "native_diagnostics": [
+    "2026.10.30 21:59:58   GoldRegimeRetest diagnostics: bars=113 warmup=0 signals=6 opportunity_rows=6 busy=3 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=3 time_exits=0",
+    "2026.10.30 21:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=6 armed=0 expired=0 regime_rejected=0 session_rejected=51 market_closed_rejected=0 daily_flat_exits=2",
+    "2026.10.30 21:59:58   GoldRegimeRetest diagnostics: bars=113 warmup=0 signals=1 opportunity_rows=1 busy=0 spread_rejected=0 zero_volume=0 cost_rejected=0 invalid_stops=0 margin_rejected=0 order_rejected=0 entries=1 time_exits=0",
+    "2026.10.30 21:59:58   GoldRegimeRetest v2 diagnostics: raw_breakouts=6 armed=4 expired=1 regime_rejected=0 session_rejected=51 market_closed_rejected=0 daily_flat_exits=0"
+  ]
+}
