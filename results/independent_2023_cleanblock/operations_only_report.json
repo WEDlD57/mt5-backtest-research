@@ -1,0 +1,401 @@
+{
+  "variant": "operations_only",
+  "role": "primary",
+  "classification": "Exploratory data-quality-constrained historical stress scenario using January\u2013September2023 and provider-declared timestamps. It is not the rejected full2023validation, native broker replication, or prospective proof.",
+  "status": "inconclusive_unobserved_price_paths",
+  "period_start_inclusive": "2023-01-01",
+  "period_end_exclusive": "2023-10-01",
+  "scenario_clock": "UTC",
+  "broker_clock_offset": "Unknown; numeric07\u201320UTC/Friday17hours are not asserted to be the original broker-server physical hours.",
+  "provider": "HistData Generic ASCII tick quotes",
+  "provenance": {
+    "input_file": "histdata_XAUUSD_clean_block_20221101_20231001.csv",
+    "input_sha256": "9fa24eded1debe92e1cf2f62a6e4087d3c9ea0b23dfe2b55788ad79cba5a639c",
+    "plan_file": "study_plan.json",
+    "plan_sha256": "c77c34cf82b54a796477ceab4240f92888cf3e705306e288c3692173859198d1",
+    "module_sha256": {
+      "gold_signals.py": "7f99e63576928612464934eaf7f3c98fa16f02d320ce57ba29bd604352910c9f",
+      "benchmark_revision.py": "e6b506bcd192f3914dba8819b584877d809bdabf5f03f65d345bd20323ca09c1",
+      "independent_study.py": "1e40a08707b5fadfe86d3b07785b368e56418f9a7a611b3cf4ccbcecf97cb099"
+    },
+    "strategy_source_sha256_from_fixed_plan": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+    "source_clock_note": "Fixed EST (UTC-5), no daylight saving; add5hours to obtainUTC",
+    "adapter_clock_conversion": "None: canonical input must already be UTC",
+    "actual_quote_time_precision": "Precise companion timestamps validated where present; execution event times floored to whole seconds, matching the signal module/kernel",
+    "quote_price_grid": {
+      "source_quote_prices_preserved": true,
+      "protective_level_tick_size": 0.01,
+      "protective_level_decimal_digits": 2,
+      "OHLC_cells_off_protective_grid": 2234881,
+      "minutes_with_any_quote_off_protective_grid": 279467,
+      "off_grid_cells_by_field": {
+        "open": 279395,
+        "high": 279428,
+        "low": 279317,
+        "close": 279407,
+        "ask_open": 279344,
+        "ask_high": 279223,
+        "ask_low": 279416,
+        "ask_close": 279351
+      },
+      "maximum_price_distance_to_protective_grid": 0.005,
+      "limitation": "Provider entry/exit quote prices retain decoded precision. Only protective stop/target levels are rounded to the declared order grid. Finer provider quotes are not asserted executable on the original broker."
+    },
+    "coverage_file": "coverage.json",
+    "rows_used": 279467,
+    "rows_outside_fixed_range": 0
+  },
+  "fixed_plan": {
+    "recorded_client_date": "2026-10-31",
+    "evaluation_start_inclusive": "2023-01-01",
+    "evaluation_end_exclusive": "2023-10-01",
+    "warmup_start_inclusive": "2022-11-01",
+    "provider": "HistData Generic ASCII tick quotes",
+    "canonical_download_page": "https://www.histdata.com/download-free-forex-data/",
+    "source_clock": "Fixed EST (UTC-5), no daylight saving; add5hours to obtainUTC",
+    "scenario_clock": "UTC",
+    "classification": "Exploratory data-quality-constrained historical stress scenario using January\u2013September2023 and provider-declared timestamps. It is not the rejected full2023validation, native broker replication, or prospective proof.",
+    "broker_clock_offset": "Unknown; numeric07\u201320UTC/Friday17hours are not asserted to be the original broker-server physical hours.",
+    "variants": [
+      "operations_only",
+      "regime_retest"
+    ],
+    "primary": "operations_only",
+    "secondary": "regime_retest",
+    "strategy_source_sha256": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+    "signal_module_sha256": "7f99e63576928612464934eaf7f3c98fa16f02d320ce57ba29bd604352910c9f",
+    "execution_module_sha256": "e6b506bcd192f3914dba8819b584877d809bdabf5f03f65d345bd20323ca09c1",
+    "native_signal_parity": "236/236 events byminute+direction;233/236 exactseconds becauselegacyM1lacksfirsttickseconds. IndicatorCSVroundingdifferences<=5.01e-11.",
+    "virtual_contract": {
+      "point": "0.01",
+      "digits": "2",
+      "tick_size": "0.01",
+      "contract_size": "100",
+      "volume_min": "0.01",
+      "volume_max": "100",
+      "volume_step": "0.01",
+      "currency_profit": "USD",
+      "account_currency": "USD",
+      "stops_level_points": "0",
+      "swap_mode": "4",
+      "swap_long": "-55.74",
+      "swap_short": "-42.819",
+      "swap_rollover3days": "3",
+      "swap_sunday": "0",
+      "swap_monday": "1",
+      "swap_tuesday": "1",
+      "swap_wednesday": "3",
+      "swap_thursday": "1",
+      "swap_friday": "1",
+      "swap_saturday": "0"
+    },
+    "specification_note": "Declared virtual100oz/.01lot contract andUSD account; not executable HistData/broker specifications.",
+    "financing_note": "Static USD-per-lot daily financing assumptions borrowed from the prior study snapshot; Wednesdaytriple. These are NOT verified2023providerhistoricalrates. Apply across every crossedUTCmidnight, including delayed daily closes; reportovernightpositions.",
+    "initial_simulated_balance_usd": 100000,
+    "risk_fraction": 0.0025,
+    "max_spread_price": 1.0,
+    "max_spread_to_stop": 0.1,
+    "max_extra_cost_to_risk_budget": 0.1,
+    "commission_roundtrip_usd_per_lot": 7.0,
+    "adverse_slippage_price_per_side": 0.1,
+    "stress_cost_multiplier": 2.0,
+    "stress_note": "Doubles declared commission and adverse slippage; financing assumptions unchanged.",
+    "trading_permission_assumption": "Each observed quoted minute is assumed fillable. No original broker session schedule is copied; no24-hour historicalsessions are fabricated.",
+    "missing_data_policy": "No imputation; preserve every observed validquote and disclosecalendar/hour gaps. Actual first and last tick times are retained for fill bounds.",
+    "execution_limitations": [
+      "M1bid/askOHLCdoesnotrecreateintraminutetickordering.",
+      "Simultaneousstop/targetminuteusesadversestoppriority;targetgapsreceive nofavorableimprovement.",
+      "Closed-balance drawdown excludes floatingequityexcursions.",
+      "Financing, contract andfillablequotedminuteassumptions limit transfer to livebrokerexecution."
+    ],
+    "seed": 20261031,
+    "simulations_per_random_policy": 5000,
+    "controls": [
+      "fair randomdirection",
+      "observed long-bias randomdirection"
+    ],
+    "evidence_gates": [
+      "positive modeled after-cost return",
+      "rankabove95thpercentile ofbothcontrols within sameengine",
+      "positiveweeklybootstraplowerbound withatleast8activeweeklyblocks",
+      "atleast30closedtrades",
+      "positiveafterdoubleddeclaredcommission/slippage"
+    ],
+    "interpretation": "All numerical gates are descriptive for this amended exploratory scenario. Even passing all gates does not establish a dependable liveedge, repair the failed full-year study, or replace future native validation. Secondary outcomes remain exploratory.",
+    "optimization_permitted": false,
+    "data_redistribution": "Do not publish rawcontinuousquotehistory ordownloadnonces. Publish code, hashes, coverage and simulatedjournals only.",
+    "original_fullyear_attempt": {
+      "evaluation_start_inclusive": "2023-01-01",
+      "evaluation_end_exclusive": "2024-01-01",
+      "status": "NOT RUN: timestamp quality gate failed before return calculation.",
+      "failed_source_months": [
+        "2022-10 warmup",
+        "2023-10 evaluation"
+      ],
+      "original_plan_sha256": "8b3d639ee2252551bf5e0bb927ec9a6cc962e6fe83c2295f855648de2a02dcbc"
+    },
+    "amendment_before_performance": {
+      "recorded_client_date": "2026-10-31",
+      "basis": "Data quality only; no independent-feed strategy P/L had been calculated.",
+      "scope": "Separate exploratory longest contiguous clean block; not the original full-year validation.",
+      "excluded": "Both ambiguous October months are retained in the audit and never normalized or included. ValidNovDec2023remainarchivedbutareoutside this independent cleanblock.",
+      "warmup_change": "UsevalidNovember\u2013December2022 warmup instead of ambiguousOctober2022. Actualfirstavailablequoteafterstart is reported; nofilledwarmupquotes.",
+      "physical_clock_note": "Converted using provider-stated fixedEST+5h; the source clock anomalies mean true UTC alignment is not independently certified."
+    },
+    "missing_quote_path_guard_before_performance": {
+      "recorded_client_date": "2026-10-31",
+      "policy": "Retainallmodeledpaths/returnsbutcountunobservedminutesduringholds. A gap may be closed market or absent feed; do not infer which. Any gap in any valid direction outcome prevents a complete-path evidence pass.",
+      "selection": "No trade is dropped or chosen using future quote availability.",
+      "status_if_gap": "inconclusive_unobserved_price_paths"
+    }
+  },
+  "signal_generation": {
+    "variant": "operations_only",
+    "start_inclusive": "2023-01-01T00:00:00",
+    "end_exclusive": "2023-10-01T00:00:00",
+    "rules": {
+      "breakout_bars": 24,
+      "ema_period": 200,
+      "atr_period": 14,
+      "adx_period": 14,
+      "min_adx": 18.0,
+      "retest_bars": 3,
+      "retest_tolerance_atr": 0.25,
+      "retest_close_buffer_atr": 0.02
+    },
+    "indicator_history_first_bar": "2022-11-01T05:00:00",
+    "total_hourly_bars": 4665,
+    "diagnostics": {
+      "bars": 3687,
+      "outside_entry_window": 1797,
+      "warmup": 0,
+      "raw_breakouts": 173,
+      "armed": 0,
+      "expired": 0,
+      "regime_rejected": 0,
+      "signal_opportunities": 173
+    },
+    "first_tick_second_known": true,
+    "time_basis": "Input feed timestamps; no broker offset inferred",
+    "ask_open_available": true,
+    "method": "MetaQuotes EMA200, rolling-SMA ATR14, EMA-smoothed normalized-DM iADX14; closed candles only."
+  },
+  "initial_simulated_balance_usd": 100000.0,
+  "raw_signal_opportunities": 173,
+  "actual_policy_same_engine": {
+    "net_usd": -1962.7192299999733,
+    "return_pct": -1.9627192299999763,
+    "trades": 113,
+    "win_rate_pct": 38.93805309734513,
+    "long_trades": 51,
+    "net_expectancy_R": -0.0696388496186202,
+    "closed_balance_max_drawdown_pct": 3.333499229999987,
+    "profit_factor_after_modeled_costs": 0.82516501576889,
+    "skips": {
+      "busy": 58,
+      "minimum_volume_or_budget": 0,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 2
+    }
+  },
+  "fair_random_direction_control": {
+    "simulations": 5000,
+    "return_pct_quantiles": {
+      "p05": -6.803685219999994,
+      "p50": -3.1460178500000158,
+      "p95": 0.5188327299999608
+    },
+    "probability_of_positive_return": 0.0784,
+    "observed_percentile": 70.84,
+    "benchmark_upper_tail_probability": 0.2917416516696661,
+    "trade_count_min_median_max": [
+      115.0,
+      121.0,
+      130.0
+    ],
+    "interpretation": "Conditional random-policy benchmark rank; not a formal exchangeable permutation p-value."
+  },
+  "long_bias_control_probability": 0.45132743362831856,
+  "long_bias_control": {
+    "simulations": 5000,
+    "return_pct_quantiles": {
+      "p05": -6.379011516499976,
+      "p50": -2.863759179999964,
+      "p95": 0.7859662030000105
+    },
+    "probability_of_positive_return": 0.1004,
+    "observed_percentile": 65.52,
+    "benchmark_upper_tail_probability": 0.34493101379724056,
+    "trade_count_min_median_max": [
+      115.0,
+      121.0,
+      129.0
+    ],
+    "interpretation": "Conditional random-policy benchmark rank; not a formal exchangeable permutation p-value."
+  },
+  "long_only_control": {
+    "net_usd": -6567.681200000006,
+    "return_pct": -6.567681200000008,
+    "trades": 124,
+    "win_rate_pct": 35.483870967741936,
+    "long_trades": 124,
+    "net_expectancy_R": -0.22165495188366188,
+    "closed_balance_max_drawdown_pct": 6.573085200000002,
+    "profit_factor_after_modeled_costs": 0.5287198420773176,
+    "skips": {
+      "busy": 47,
+      "minimum_volume_or_budget": 0,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 2
+    }
+  },
+  "doubled_commission_slippage": {
+    "net_usd": -2961.4176600000355,
+    "return_pct": -2.961417660000032,
+    "trades": 113,
+    "win_rate_pct": 38.93805309734513,
+    "long_trades": 51,
+    "net_expectancy_R": -0.10653698110765389,
+    "closed_balance_max_drawdown_pct": 4.271177660000045,
+    "profit_factor_after_modeled_costs": 0.7490392186829874,
+    "skips": {
+      "busy": 58,
+      "minimum_volume_or_budget": 0,
+      "extra_cost_gate": 0,
+      "margin_gate": 0,
+      "invalid_path": 2
+    }
+  },
+  "weekly_block_bootstrap": {
+    "unit": "calendar week, grouped by trade exit, including zero-trade weeks",
+    "calendar_weeks": 40,
+    "zero_trade_weeks": 2,
+    "nonempty_weekly_blocks": 38,
+    "distinct_entry_days": 97,
+    "limitation": "Intervals require at least two calendar and two nonempty weekly blocks. Two blocks are only a computational safeguard, not adequate evidence; few blocks give imprecise intervals, and days and trades are not assumed independent.",
+    "interval_status": "available",
+    "replications": 5000,
+    "valid_nonempty_replications": 5000,
+    "net_expectancy_R_95pct_interval": [
+      -0.2634115014774416,
+      0.11512624527671533
+    ]
+  },
+  "preliminary_evidence_gates": {
+    "positive_modeled_after_cost_return": false,
+    "above_fair_control_95th_percentile": false,
+    "above_long_bias_control_95th_percentile": false,
+    "positive_weekly_expectancy_lower_bound": false,
+    "at_least_8_nonempty_weekly_blocks": true,
+    "at_least_30_closed_trades": true,
+    "positive_after_doubled_commission_slippage": false,
+    "all_available_direction_price_paths_observed": false
+  },
+  "holding_diagnostics": {
+    "actual_executed": {
+      "trades": 113,
+      "overnight_trades": 2,
+      "crossed_utc_midnights": 2,
+      "exits_after_deadline": 24,
+      "exits_past_deadline_minute": 21,
+      "period_end_forced_settlements": 0,
+      "funding_usd": -50.09823,
+      "trades_with_unobserved_quote_minutes": 53,
+      "unobserved_quote_minutes": 8477,
+      "max_unobserved_quote_gap_minutes": 300
+    },
+    "long_only_executed": {
+      "trades": 124,
+      "overnight_trades": 2,
+      "crossed_utc_midnights": 2,
+      "exits_after_deadline": 27,
+      "exits_past_deadline_minute": 23,
+      "period_end_forced_settlements": 0,
+      "funding_usd": -62.9862,
+      "trades_with_unobserved_quote_minutes": 53,
+      "unobserved_quote_minutes": 8956,
+      "max_unobserved_quote_gap_minutes": 300
+    },
+    "doubled_cost_executed": {
+      "trades": 113,
+      "overnight_trades": 2,
+      "crossed_utc_midnights": 2,
+      "exits_after_deadline": 24,
+      "exits_past_deadline_minute": 21,
+      "period_end_forced_settlements": 0,
+      "funding_usd": -48.81366,
+      "trades_with_unobserved_quote_minutes": 53,
+      "unobserved_quote_minutes": 8477,
+      "max_unobserved_quote_gap_minutes": 300
+    },
+    "all_available_direction_outcomes": {
+      "paths": 340,
+      "overnight_paths": 6,
+      "paths_past_deadline_minute": 64,
+      "invalid_paths_by_reason": {
+        "spread_gate": 6
+      },
+      "paths_with_unobserved_quote_minutes": 158,
+      "unobserved_quote_minutes": 24651,
+      "max_unobserved_quote_gap_minutes": 360,
+      "aggregation_note": "Unobserved minutes are summed separately across direction paths; overlapping calendar minutes are counted again, not reported as unique global missing minutes."
+    },
+    "random_control_note": "Per-trajectory holding counts are not stored by the immutable kernel. Every selected direction outcome already includes the same declared financing across all crossed UTC midnights; available-path counts are not executed-control trade counts."
+  },
+  "costs": {
+    "spread": "Actual paired bid/ask opening and exit-side candle prices",
+    "roundtrip_commission_usd_per_lot": 7.0,
+    "adverse_price_slippage_per_side": 0.1,
+    "base_total_commission_slippage_per_lot": 27.0,
+    "stress_multiplier": 2.0,
+    "raw_quotes_contain_no_recorded_commission": true
+  },
+  "financing": {
+    "mode": 4,
+    "units": "Declared static USD per lot, not actual historical provider rates",
+    "long_per_lot": -55.74,
+    "short_per_lot": -42.819,
+    "weekday_multipliers_sunday_first": [
+      0.0,
+      1.0,
+      1.0,
+      3.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "rollover_clock": "UTC midnight, charging previous weekday's multiplier",
+    "note": "Static USD-per-lot daily financing assumptions borrowed from the prior study snapshot; Wednesdaytriple. These are NOT verified2023providerhistoricalrates. Apply across every crossedUTCmidnight, including delayed daily closes; reportovernightpositions."
+  },
+  "execution": {
+    "price_data": "HistData actual paired tick quotes aggregated to bid/ask M1; UTC modeled scenario",
+    "actual_bid_and_ask_OHLC_required": true,
+    "quoted_minutes_assumed_fillable": true,
+    "broker_session_schedule_used": false,
+    "quote_bounds": "Actual first/last quote times, quantized to whole seconds by the immutable kernel; no fabricated :00/:59 tick endpoints",
+    "period_end": "Forced modeled settlement at the last observed pre-boundary quote, explicitly counted",
+    "coverage_file": "coverage.json",
+    "coverage_hour_file": "coverage_hours.csv",
+    "price_precision": "Provider entry/exit quotes are retained at decoded precision; only protective levels are rounded to the declared .01 tick/digits=2 grid. No original-broker executability of finer quotes is asserted."
+  },
+  "limitations": [
+    "Provider UTC candles and numeric hours are not assumed physically equivalent to the original broker's unknown-offset clock.",
+    "M1 OHLC does not reveal intraminute ordering; same-minute stop/target uses adverse stop priority and target gaps receive no favorable improvement.",
+    "Contract, margin, financing and quoted-minute execution are virtual scenario assumptions, not verified provider executable specifications.",
+    "Random-direction ranks condition on strategy-generated opportunity timing and are not a formal exchangeable experiment or probabilities of future profit.",
+    "Closed-balance drawdown excludes floating equity excursions.",
+    "A secondary favorable result cannot replace the predeclared primary; historical passes require further untouched validation.",
+    "Unobserved quote minutes cannot establish the intervening price path. Any affected available direction outcome makes the scenario inconclusive regardless of numeric performance gates; no trade is dropped or repriced."
+  ],
+  "data_fidelity": {
+    "gate": "all_available_direction_price_paths_observed",
+    "observation_unit": "UTC quote-minute presence over each inclusive holding-minute span",
+    "scope": "Every valid long/short direction outcome, including alternatives not executed by the actual policy",
+    "failure_status": "inconclusive_unobserved_price_paths",
+    "gap_classification": "None: absent quote minutes may reflect market closure, feed gaps or another cause",
+    "execution_selection": "All modeled trades and returns retained; coverage diagnostics never filter or change an execution",
+    "limitation": "Zero absent minutes is necessary for this gate, not proof of a complete tick path or known intraminute ordering."
+  }
+}
