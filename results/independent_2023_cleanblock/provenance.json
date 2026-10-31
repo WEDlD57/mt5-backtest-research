@@ -1,0 +1,37 @@
+{
+  "input_file": "histdata_XAUUSD_clean_block_20221101_20231001.csv",
+  "input_sha256": "9fa24eded1debe92e1cf2f62a6e4087d3c9ea0b23dfe2b55788ad79cba5a639c",
+  "plan_file": "study_plan.json",
+  "plan_sha256": "c77c34cf82b54a796477ceab4240f92888cf3e705306e288c3692173859198d1",
+  "module_sha256": {
+    "gold_signals.py": "7f99e63576928612464934eaf7f3c98fa16f02d320ce57ba29bd604352910c9f",
+    "benchmark_revision.py": "e6b506bcd192f3914dba8819b584877d809bdabf5f03f65d345bd20323ca09c1",
+    "independent_study.py": "1e40a08707b5fadfe86d3b07785b368e56418f9a7a611b3cf4ccbcecf97cb099"
+  },
+  "strategy_source_sha256_from_fixed_plan": "aee4304916495f18895d8022608b09211ade99e3898587b04453a852ee3b9e7f",
+  "source_clock_note": "Fixed EST (UTC-5), no daylight saving; add5hours to obtainUTC",
+  "adapter_clock_conversion": "None: canonical input must already be UTC",
+  "actual_quote_time_precision": "Precise companion timestamps validated where present; execution event times floored to whole seconds, matching the signal module/kernel",
+  "quote_price_grid": {
+    "source_quote_prices_preserved": true,
+    "protective_level_tick_size": 0.01,
+    "protective_level_decimal_digits": 2,
+    "OHLC_cells_off_protective_grid": 2234881,
+    "minutes_with_any_quote_off_protective_grid": 279467,
+    "off_grid_cells_by_field": {
+      "open": 279395,
+      "high": 279428,
+      "low": 279317,
+      "close": 279407,
+      "ask_open": 279344,
+      "ask_high": 279223,
+      "ask_low": 279416,
+      "ask_close": 279351
+    },
+    "maximum_price_distance_to_protective_grid": 0.005,
+    "limitation": "Provider entry/exit quote prices retain decoded precision. Only protective stop/target levels are rounded to the declared order grid. Finer provider quotes are not asserted executable on the original broker."
+  },
+  "coverage_file": "coverage.json",
+  "rows_used": 279467,
+  "rows_outside_fixed_range": 0
+}
