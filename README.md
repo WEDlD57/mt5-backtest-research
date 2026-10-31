@@ -2,7 +2,9 @@
 
 Original, tester-only XAUUSD research programs, simulated trade journals, random-direction benchmarks, and a record of unsuccessful strategy ideas.
 
-**No dependable profitable edge was established.** The revised execution controls worked, but neither gold revision passed the evidence gates. All revised test periods were already examined; they are exploratory retests.
+**No dependable profitable edge was established.** The completed October 26–30 native week was positive on only three and one trades. A separate January–September 2023 modeled study lost **1.96% on 113 trades** and **1.37% on 29 trades**. Both failed the random-direction thresholds and remain inconclusive because holdings cross unobserved quote minutes. The original full-year test was rejected for clock reversals before returns were calculated.
+
+Read the [October 31 report](reports/PROGRESS_2026_10_31.md) for the completed week, the longer losing study, source audit and limits. These are historical research results, not evidence of dependable future returns.
 
 ![Native after-cost comparison](reports/overview.png)
 
@@ -18,9 +20,18 @@ Returns include recorded native costs plus a commission top-up and adverse-slipp
 
 The initial USD 10,000 gold test generated only two trades because minimum lot sizes often exceeded its risk budget. The larger simulated balance studies that execution constraint; it is not a funding recommendation.
 
-## October 26–29 extension
+## Completed week and independent history
 
-An unchanged-rule check on the next four previously unbacktested days produced **+0.07146% on one trade** for the hours-only profile and **zero trades** for the retest profile. This is descriptive evidence only. The period is not wholly prospective because it partly precedes the October 28 source freeze. A single week cannot support a weekly confidence interval; that reporting edge case is now guarded, and 24 tests pass. [New-period report](reports/EXTENSION_2026-10-26_29.md) · [Fixed future validation plan](reports/NEXT_VALIDATION.md).
+| Unchanged profile | Native October 26–30 | Independent January–September 2023 model |
+|---|---:|---:|
+| Hours and daily close | +0.65522% / 3 trades | −1.96272% / 113 trades |
+| Hours, retest and ADX | +0.47584% / 1 trade | −1.37081% / 29 trades |
+
+Each scenario starts independently at USD 100,000 simulated equity. The combined week includes the previously examined October 26–29 dates. The independent feed uses declared virtual costs, contract and provider clock assumptions; it is not native broker replication. Both modeled profiles are classified `inconclusive_unobserved_price_paths`. No strategy parameters were tuned after these results. [Results and audit](reports/PROGRESS_2026_10_31.md).
+
+## Earlier October 26–29 extension
+
+An unchanged-rule check on the next four previously unbacktested days produced **+0.07146% on one trade** for the hours-only profile and **zero trades** for the retest profile. This is descriptive evidence only. The period is not wholly prospective because it partly precedes the October 28 source freeze. A single week cannot support a weekly confidence interval; that reporting edge case is now guarded, and the expanded suite now has 63 passing tests. [New-period report](reports/EXTENSION_2026-10-26_29.md) · [Fixed future validation plan](reports/NEXT_VALIDATION.md).
 
 ## Programs and evidence
 
@@ -29,7 +40,7 @@ An unchanged-rule check on the next four previously unbacktested days produced *
 - [Full results and limits](reports/RESULTS.md), [native execution verification](reports/revision_verification.json), [earlier EURUSD findings](reports/PRIOR_RESEARCH.md), and [public-source bot checks](reports/THIRD_PARTY_BOTS.md).
 - `data/`: simulated native deals and signal opportunities. Position/deal identifiers belong to test simulations and identify no live account.
 - `results/`: native cost-adjusted summaries, modeled trade journals, benchmark reports and random-return distributions, including losing cases.
-- `analysis/`: portable journal summarizer, independent benchmark engines and chart builder. `tests/` contains 24 execution, accounting and statistical checks.
+- `analysis/`: portable journal summarizer, independent benchmark engines and chart builder. `tests/` contains 63 signal, conversion, execution, accounting and statistical checks. A local-ZIP converter and independent-history adapter make the larger study reproducible with separately obtained quotes.
 
 Every trading program refuses to initialize on a trading chart and runs only in the Strategy Tester. There is no continuous trading service in this repository. The native code compiled with zero errors and warnings. In all six revised native runs, journal volumes balanced, no positions crossed midnight, swaps were zero, and no orders were rejected or attempted while the broker market was closed. Native/model entry sets matched exactly, while small return differences remain from minute aggregation and execution details.
 
